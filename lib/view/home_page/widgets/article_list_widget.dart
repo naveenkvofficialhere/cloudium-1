@@ -25,7 +25,7 @@ class ArticleListWidget extends GetView<HomeController> {
     return Container(
       padding: const EdgeInsets.all(16),
       child: ListTile(
-        onTap: () => controller.launchUrl(articleUrl),
+        onTap: () => controller.launchUrlFun(articleUrl),
         title: Text(
           title,
           maxLines: 2,

@@ -48,7 +48,7 @@ class HomeController extends GetxController {
   }
 
   //function to launch the article url
-  Future<void> launchUrl(articleUrl) async {
+  Future<void> launchUrlFun(articleUrl) async {
     var url = Uri.parse(articleUrl);
     if (await canLaunchUrl(url)) {
       launchUrl(url);
