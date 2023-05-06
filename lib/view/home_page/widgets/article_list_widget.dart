@@ -59,19 +59,13 @@ class ArticleListWidget extends GetView<HomeController> {
             )
           ],
         ),
-        leading: Padding(
-          padding: const EdgeInsets.only(top: 8),
-          child: CircleAvatar(
-            backgroundColor: Colors.grey,
-            backgroundImage: NetworkImage(image),
-          ),
+        leading: CircleAvatar(
+          backgroundColor: Colors.grey,
+          backgroundImage: NetworkImage(image),
         ),
-        trailing: const Padding(
-          padding: EdgeInsets.only(top: 20),
-          child: Icon(
-            Icons.arrow_forward_ios_rounded,
-            size: 15,
-          ),
+        trailing: const Icon(
+          Icons.arrow_forward_ios_rounded,
+          size: 15,
         ),
       ),
     );

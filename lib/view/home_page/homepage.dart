@@ -55,28 +55,32 @@ class HomePage extends GetView<HomeController> {
                   ? const Center(
                       child: Text('Somethig went wrong'),
                     )
-                  : ListView.builder(
-                      itemCount: controller.filteredArticle.length,
-                      itemBuilder: (context, index) {
-                        final data = controller.filteredArticle[index];
-                        var image = '';
-                        if (data.media != null) {
-                          if (data.media!.isNotEmpty) {
-                            image =
-                                data.media![0].mediaMetadata![0].url.toString();
-                          }
-                        }
+                  : controller.filteredArticle.isEmpty
+                      ? const Center(
+                          child: Text('No results found'),
+                        )
+                      : ListView.builder(
+                          itemCount: controller.filteredArticle.length,
+                          itemBuilder: (context, index) {
+                            final data = controller.filteredArticle[index];
+                            var image = '';
+                            if (data.media != null) {
+                              if (data.media!.isNotEmpty) {
+                                image = data.media![0].mediaMetadata![0].url
+                                    .toString();
+                              }
+                            }
 
-                        return ArticleListWidget(
-                          articleUrl: data.url.toString(),
-                          date: data.publishedDate.toString(),
-                          image: image,
-                          subtitle: data.byline.toString(),
-                          subtitle1: '',
-                          title: data.title.toString(),
-                        );
-                      },
-                    ),
+                            return ArticleListWidget(
+                              articleUrl: data.url.toString(),
+                              date: data.publishedDate.toString(),
+                              image: image,
+                              subtitle: data.byline.toString(),
+                              subtitle1: '',
+                              title: data.title.toString(),
+                            );
+                          },
+                        ),
         ),
       ),
     );
