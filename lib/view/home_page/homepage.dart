@@ -60,7 +60,11 @@ class HomePage extends GetView<HomeController> {
                           child: Text('No results found'),
                         )
                       : RefreshIndicator(
-                          onRefresh: () => controller.fetchNyTimes(),
+                          onRefresh: () {
+                            controller.searchController.clear();
+                            controller.isSearch.value = false;
+                            return controller.fetchNyTimes();
+                          },
                           child: ListView.builder(
                             itemCount: controller.filteredArticle.length,
                             itemBuilder: (context, index) {
