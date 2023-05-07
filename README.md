@@ -4,7 +4,7 @@ This project is for listing nyTime's most popular articles. A simple UI shows a 
 
 Description
 
-Ny time's project shows a list of most popular articles and provided search option based on the title of the news.
+Ny time's project shows a list of most popular articles and provided search option based on the title of the news.When the user clicks on the tile it opens details page of the tile in the webbrowser.
 
 Getting Started
 
