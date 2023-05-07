@@ -1,6 +1,6 @@
 Most Popular Articles in NYTImes
 
-This project is for listing nyTime's most popular articles. A simple UI shows a list of most popular articles .
+The project is designed to show a list of nyTime's most popular articles.
 
 Description
 
@@ -21,6 +21,8 @@ git clone https://github.com/naveenkvofficialhere/cloudium-1.git
   shimmer: ^2.0.0
   
   url_launcher: ^6.1.10
+  
+  flutter_web_browser: ^0.17.1
 
 3.Run the app
 
