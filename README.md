@@ -15,8 +15,11 @@ git clone https://github.com/naveenkvofficialhere/cloudium-1.git
 2.Install dependencies
 
   get: ^4.6.5
+  
   dio: ^5.1.1
+  
   shimmer: ^2.0.0
+  
   url_launcher: ^6.1.10
 
 3.Run the app
