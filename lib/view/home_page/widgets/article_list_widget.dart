@@ -1,6 +1,7 @@
 import 'package:cloudium_new/controller/homecontroller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_web_browser/flutter_web_browser.dart';
 
 class ArticleListWidget extends GetView<HomeController> {
   const ArticleListWidget({
@@ -25,7 +26,9 @@ class ArticleListWidget extends GetView<HomeController> {
     return Container(
       padding: const EdgeInsets.all(16),
       child: ListTile(
-        onTap: () => controller.launchUrlFun(articleUrl),
+        onTap: () async {
+          await FlutterWebBrowser.openWebPage(url: articleUrl);
+        },
         title: Text(
           title,
           maxLines: 2,
